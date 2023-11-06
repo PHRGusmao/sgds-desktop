@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1177.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sgds.controller.HomeEnController">
+   <children>
+      <VBox prefHeight="323.0" prefWidth="246.0" style="-fx-background-color: #022031;" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="127.0" prefWidth="246.0">
+               <children>
+                  <ImageView fitHeight="274.0" fitWidth="273.0" layoutX="-29.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/imgs/Logo3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnAgendamentos" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#verAgendamentos" prefHeight="48.0" prefWidth="335.0" style="-fx-background-color: #022031;" text="Agendamentos" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Tahoma" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Documents/Projetos/Java/sgds-desktop/src/resources/static/imgs/Clipboard%20List.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTriagem" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#verTriagem" prefHeight="48.0" prefWidth="335.0" style="-fx-background-color: #022031;" text="Triagem" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Documents/Projetos/Java/sgds-desktop/src/resources/static/imgs/Medical%20Doctor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPerfil" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#verPerfil" prefHeight="48.0" prefWidth="335.0" style="-fx-background-color: #022031;" text="Perfil" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Documents/Projetos/Java/sgds-desktop/src/resources/static/imgs/Account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutY="323.0" prefHeight="178.0" prefWidth="246.0" style="-fx-background-color: #022031;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="322.0">
+         <children>
+            <Label fx:id="lblNomeOperador" alignment="CENTER" layoutX="31.0" layoutY="12.0" prefHeight="23.0" prefWidth="185.0" text="Nome do Operador" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="143.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCargoOperador" alignment="CENTER" layoutX="31.0" layoutY="35.0" prefHeight="23.0" prefWidth="185.0" text="Cargo do Operador" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="120.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblData" alignment="CENTER" layoutX="31.0" layoutY="86.0" prefHeight="23.0" prefWidth="185.0" text="Data" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="69.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSair" alignment="CENTER" layoutX="46.0" layoutY="156.0" mnemonicParsing="false" onAction="#encerrar" prefHeight="48.0" prefWidth="193.0" style="-fx-background-color: #022031;" text="Sair" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="Tahoma" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/imgs/Logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="painelTriagem" layoutX="246.0" prefHeight="500.0" prefWidth="931.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="18.0" prefHeight="69.0" prefWidth="931.0" style="-fx-background-color: #468387;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <FlowPane alignment="CENTER" prefHeight="49.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="TRIAGEM" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="86.0" prefHeight="414.0" prefWidth="931.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+               <children>
+                  <TextField fx:id="textPesquisarCpf" layoutX="14.0" layoutY="7.0" prefHeight="30.0" prefWidth="236.0" promptText="Digite o CPF do paciente" />
+                  <Button fx:id="btnPesquisar" layoutX="252.0" layoutY="7.0" mnemonicParsing="false" onAction="#pesquisarCpf" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #ffff; -fx-border-color: #A2A2A2;" text="Pesquisar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button disable="true" layoutX="730.0" layoutY="359.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #ffff; -fx-border-color: #A2A2A2;" text="Confirmar" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="359.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <FlowPane hgap="15.0" layoutX="15.0" layoutY="37.0" prefHeight="30.0" prefWidth="911.0" vgap="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="137.0" text="Nome do Paciente">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="137.0" text="CPF do Paciente">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="324.0" layoutY="10.0" prefHeight="17.0" prefWidth="137.0" text="Tipo">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="137.0" text="Local">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="15.0" layoutX="163.0" layoutY="68.0" prefHeight="289.0" prefWidth="931.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+                     <children>
+                        <AnchorPane prefHeight="255.0" prefWidth="444.0">
+                           <children>
+                              <TextArea layoutY="39.0" prefHeight="249.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="39.0" />
+                              <Label layoutX="1.0" layoutY="11.0" prefHeight="26.0" prefWidth="185.0" text="Relato do paciente:" AnchorPane.leftAnchor="1.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="250.0" prefWidth="444.0">
+                           <children>
+                              <TextArea layoutY="39.0" prefHeight="249.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="39.0" />
+                              <Label layoutX="2.0" layoutY="11.0" prefHeight="26.0" prefWidth="185.0" text="Hipótese diagnóstica:" AnchorPane.leftAnchor="2.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </FlowPane>
+                  <ComboBox fx:id="listaSuspensaPrioridade" layoutX="514.0" layoutY="359.0" prefHeight="30.0" prefWidth="195.0" promptText="Gravidade" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="painelAgendamentos" layoutX="246.0" prefHeight="500.0" prefWidth="931.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="69.0" prefWidth="931.0" style="-fx-background-color: #468387;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <FlowPane alignment="CENTER" layoutX="94.0" layoutY="14.0" prefHeight="49.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="AGENDAMENTO" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+            <TableView layoutX="14.0" layoutY="177.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="215.0" prefWidth="757.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="177.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="49.0" text="Id" />
+                <TableColumn editable="false" prefWidth="293.0" text="Nome" />
+                  <TableColumn editable="false" prefWidth="125.0" text="Data" />
+                  <TableColumn editable="false" minWidth="0.0" prefWidth="0.0" text="Especialidade" />
+                  <TableColumn editable="false" minWidth="0.0" prefWidth="289.0" text="Tipo" />
+                  <TableColumn editable="false" minWidth="0.0" prefWidth="154.0" text="Prioridade" />
+              </columns>
+            </TableView>
+            <TextField layoutX="10.0" layoutY="137.0" prefHeight="30.0" prefWidth="808.0" promptText="Buscar por Nome ou ID" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="113.0" />
+            <Button layoutX="824.0" layoutY="138.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #ffff; -fx-border-color: #A2A2A2;" text="Buscar" AnchorPane.rightAnchor="11.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <DatePicker layoutX="10.0" layoutY="90.0" prefHeight="30.0" prefWidth="170.0" AnchorPane.leftAnchor="10.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></DatePicker>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="painelPerfil" layoutX="246.0" layoutY="-1.0" prefHeight="500.0" prefWidth="931.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane alignment="CENTER" layoutY="112.0" prefHeight="371.0" prefWidth="931.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="373.0" prefWidth="373.0" style="-fx-border-color: #A2A2A2;">
+                     <children>
+                        <Label fx:id="perfilNomeOp" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="28.0" prefHeight="37.0" prefWidth="377.0" text="Nome do Operador" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="perfilCpfOp" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="81.0" prefHeight="37.0" prefWidth="377.0" text="CPF do Operador" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="perfilEmailOp" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="136.0" prefHeight="37.0" prefWidth="377.0" text="Email do Operador" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="perfilTelefoneOp" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="193.0" prefHeight="37.0" prefWidth="377.0" text="Telefone do Operador" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="perfilCargoOp" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="248.0" prefHeight="37.0" prefWidth="377.0" text="Cargo do Operador" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="perfilCodOp" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="303.0" prefHeight="37.0" prefWidth="377.0" text="Cod Trabalhista">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </FlowPane>
+            <AnchorPane layoutY="17.0" prefHeight="79.0" prefWidth="200.0" style="-fx-background-color: #468387;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="-27.0" layoutY="6.0" prefHeight="69.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="PERFIL" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

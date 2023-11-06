@@ -1,0 +1,41 @@
+    if (response.statusCode() == 200) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        UsuarioListWrapper usuarioListWrapper = objectMapper.readValue(response.body(), UsuarioListWrapper.class);
+
+        List<Usuario> usuarios = usuarioListWrapper.getUsuarios();
+        System.out.println(usuarios.get(0).getNome());
+    } else {
+        throw a new IOException("Falha na solicitação HTTP: " + response.statusCode());
+    }
+    
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    static class UsuarioListWrapper {
+
+        @JsonProperty("_embedded")
+        private Embedded embedded;
+
+        public List<Usuario> getUsuarios() {
+            if (embedded != null) {
+                return embedded.getUsuarios();
+            } else {
+                return Collections.emptyList(); // Retorna uma lista vazia se embedded for nulo
+            }
+        }
+
+        public void setEmbedded(Embedded embedded) {
+            this.embedded = embedded;
+        }
+    }
+
+
+    static class Embedded {
+        private List<Usuario> usuarios;
+
+        public List<Usuario> getUsuarios() {
+            return usuarios;
+        }
+
+        public void setUsuarios(List<Usuario> usuarios) {
+            this.usuarios = usuarios;
+        }
+    }

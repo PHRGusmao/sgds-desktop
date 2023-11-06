@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="painelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sgds.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="103.0" prefHeight="400.0" prefWidth="422.0" style="-fx-background-color: #021E2F;" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="399.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Dev/Desktop/imgs/Logo3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="206.0" layoutX="149.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="file:/C:/Users/Dev/Desktop/imgs/PanasTech%20logomarca.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="89.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja bem-vindo(a)">
+               <font>
+                  <Font name="Franklin Gothic Book" size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="103.0" style="-fx-background-color: #fff;">
+         <children>
+            <Button fx:id="btnEntrar" alignment="CENTER" layoutY="45.0" mnemonicParsing="false" onAction="#exibirPainelLogin" prefHeight="39.0" prefWidth="103.0" style="-fx-border-color: #A2A2A2;" text="Entrar" AnchorPane.bottomAnchor="316.0" AnchorPane.topAnchor="45.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font name="Tahoma" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnRegistrar" alignment="CENTER" layoutY="84.0" mnemonicParsing="false" onAction="#exibirPainelCadastro" prefHeight="39.0" prefWidth="103.0" style="-fx-border-color: #A2A2A2;" text="Registrar-se" AnchorPane.bottomAnchor="277.0" AnchorPane.topAnchor="84.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font name="Tahoma" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnFechar" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#encerrar" style="-fx-background-color: #fff;" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Desktop/imgs/Multiply.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="painelCadastro" layoutX="525.0" prefHeight="400.0" prefWidth="462.0" style="-fx-background-color: #fff;">
+         <children>
+            <Text fill="#1f8fe8" layoutX="158.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="38.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textNomeCompletoCadastro" layoutX="36.0" layoutY="75.0" prefHeight="39.0" prefWidth="392.0" promptText="Nome completo" style="-fx-border-color: #A2A2A2;" />
+            <TextField fx:id="textCpfCadastro" layoutX="36.0" layoutY="137.0" prefHeight="39.0" prefWidth="392.0" promptText="CPF" style="-fx-border-color: #A2A2A2;" />
+            <TextField fx:id="textEmailCadastro" layoutX="36.0" layoutY="200.0" prefHeight="39.0" prefWidth="392.0" promptText="EMAIL" style="-fx-border-color: #A2A2A2;" />
+            <PasswordField fx:id="textSenhaCadastro" layoutX="36.0" layoutY="262.0" prefHeight="39.0" prefWidth="195.0" promptText="Senha" style="-fx-border-color: #A2A2A2;" />
+            <TextField fx:id="textSenhaVisivelCadastro" layoutX="36.0" layoutY="262.0" prefHeight="39.0" prefWidth="195.0" promptText="Senha" style="-fx-border-color: #A2A2A2;" visible="false" />
+            <PasswordField fx:id="textConfirmarSenhaCadastro" layoutX="233.0" layoutY="262.0" prefHeight="39.0" prefWidth="195.0" promptText="Confirme a Senha" style="-fx-border-color: #A2A2A2;" />
+            <TextField fx:id="textConfirmarSenhaVisivelCadastro" layoutX="233.0" layoutY="262.0" prefHeight="39.0" prefWidth="195.0" promptText="Confirme a Senha" style="-fx-border-color: #A2A2A2;" visible="false" />
+            <ComboBox fx:id="listaSuspensa" layoutX="36.0" layoutY="323.0" prefHeight="39.0" prefWidth="195.0" promptText="Cargo" />
+            <Button fx:id="btnCadastrar" contentDisplay="GRAPHIC_ONLY" layoutX="381.0" layoutY="323.0" mnemonicParsing="false" onAction="#cadastrar" style="-fx-background-color: #fff;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Desktop/imgs/Advance.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="mostrarSenha" fitHeight="18.0" fitWidth="23.0" layoutX="402.0" layoutY="273.0" onMouseClicked="#exibirSenha" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Dev/Documents/Projetos/Java/sgds-desktop/src/resources/static/imgs/Eye.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="painelLogin" layoutX="525.0" prefHeight="400.0" prefWidth="462.0" style="-fx-background-color: #fff;">
+         <children>
+            <Text fill="#1f8fe8" layoutX="193.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="38.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textUsuario" layoutX="36.0" layoutY="148.0" onKeyPressed="#teclaPressionadaUsuario" prefHeight="39.0" prefWidth="392.0" promptText="Usuário" style="-fx-border-color: #A2A2A2;" />
+            <PasswordField fx:id="textSenha" layoutX="36.0" layoutY="222.0" onKeyPressed="#teclaPressionadaSenha" prefHeight="39.0" prefWidth="392.0" promptText="Senha" style="-fx-border-color: #A2A2A2;" />
+            <Button fx:id="btnRealizarLogin" contentDisplay="GRAPHIC_ONLY" layoutX="208.0" layoutY="292.0" mnemonicParsing="false" onAction="#logar" style="-fx-background-color: #fff;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <image>
+                        <Image url="file:/C:/Users/Dev/Desktop/imgs/Advance.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
